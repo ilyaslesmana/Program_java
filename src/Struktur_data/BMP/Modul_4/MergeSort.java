@@ -1,4 +1,4 @@
-package BMP.Modul_4;
+package Struktur_data.BMP.Modul_4;
 
 public class MergeSort {
     // Fungsi untuk menggabungkan dua subarray (halaman 6.22)

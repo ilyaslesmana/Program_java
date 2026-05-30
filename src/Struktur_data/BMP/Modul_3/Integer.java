@@ -1,4 +1,4 @@
-package BMP.Modul_3;
+package Struktur_data.BMP.Modul_3;
 
 public class Integer {
     public static void main(String[] args) {

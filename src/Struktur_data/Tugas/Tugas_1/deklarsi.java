@@ -1,4 +1,4 @@
-package Tuton.Tugas_1;
+package Struktur_data.Tugas.Tugas_1;
 
 import java.util.LinkedList;
 

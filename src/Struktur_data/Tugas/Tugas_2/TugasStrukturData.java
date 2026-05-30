@@ -1,4 +1,4 @@
-package Tuton.Tugas_2;
+package Struktur_data.Tugas.Tugas_2;
 
 import java.util.Stack; // Untuk Stack
 import java.util.LinkedList; // Untuk implementasi Queue

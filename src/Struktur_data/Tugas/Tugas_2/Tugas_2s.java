@@ -1,4 +1,4 @@
-package Tuton.Tugas_2; // Mendefinisikan lokasi folder (package) tempat file kode Java ini disimpan
+package Struktur_data.Tugas.Tugas_2; // Mendefinisikan lokasi folder (package) tempat file kode Java ini disimpan
 
 import java.util.Stack; // Mengimpor library Java bawaan untuk menggunakan struktur data Stack (LIFO)
 import java.util.Queue; // Mengimpor library antarmuka (interface) Queue (FIFO)

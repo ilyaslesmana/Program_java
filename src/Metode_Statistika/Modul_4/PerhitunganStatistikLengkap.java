@@ -1,3 +1,5 @@
+package Metode_Statistika.Modul_4;
+
 public class PerhitunganStatistikLengkap {
     public static void main(String[] args) {
         // Menambahkan variabel statis x sesuai permintaan

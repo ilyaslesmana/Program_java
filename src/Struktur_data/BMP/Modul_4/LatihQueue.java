@@ -1,4 +1,4 @@
-package BMP.Modul_4;
+package Struktur_data.BMP.Modul_4;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package Modul_4;
+package Metode_Statistika.Modul_4;
 
 import java.util.Scanner;
 

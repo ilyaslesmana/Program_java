@@ -1,4 +1,4 @@
-package BMP.Modul_2;
+package Struktur_data.BMP.Modul_2;
 
 import java.util.Scanner;
 
