@@ -11,32 +11,32 @@ class LatihanDFS {
     private LinkedList<Integer> adj[];
 
     // 3. Constructor (Inisialisasi sistem)
-    LatihanDFS(int node) {
-        jumlahNode = node;
-        adj = new LinkedList[node];
-        for (int i = 0; i < node; i++) {
+    LatihanDFS(int vertex) {
+        jumlahNode = vertex;
+        adj = new LinkedList[vertex];
+        for (int i = 0; i < vertex; i++) {
             adj[i] = new LinkedList<>();
         }
     }
 
     // 4. Method Public / API (Fungsi yang diakses user luar)
-    void addEdge(int node, int nilaiEdge) {
-        adj[node].add(nilaiEdge);
-        System.err.println("add node -> " + node + "\t| add edge -> " + nilaiEdge);
+    void addEdge(int vertex, int nilaiEdge) {
+        adj[vertex].add(nilaiEdge);
+        System.err.println("add vertex -> " + vertex + "\t| add edge -> " + nilaiEdge);
     }
 
     // Fungsi utama pencarian yang dipanggil user
-    void DFS(int node) {
+    void DFS(int vertex) {
         boolean visited[] = new boolean[jumlahNode];
-        DFSutil(node, visited);
+        DFSutil(vertex, visited);
     }
 
     // 5. Method Helper / Mesin Core (Disembunyikan di bawah)
-    void DFSutil(int node, boolean visited[]) {
-        visited[node] = true;
-        System.out.println("visit node -> " + node + " ");
+    void DFSutil(int vertex, boolean visited[]) {
+        visited[vertex] = true;
+        System.out.println("visit vertex -> " + vertex + " ");
 
-        Iterator<Integer> i = adj[node].listIterator();
+        Iterator<Integer> i = adj[vertex].listIterator();
         while (i.hasNext()) {
             int n = i.next();
             if (!visited[n]) {
