@@ -81,12 +81,13 @@ public class latihanGraph {
         // Terus berjalan selama tumpukan (Stack) belum kosong
         while (!stackLifo.isEmpty()) {
             int nodeSekarang = stackLifo.pop(); // Ambil node paling atas dari stack
-            System.out.println("\n-> POP node a" + nodeSekarang + " dari atas stack");
+            System.out.println("\n-> POP node [a" + nodeSekarang + "] dari atas stack");
+            System.out.println("=> isi stack sekarang :" + stackLifo);
 
             // Cek apakah node ini belum pernah dikunjungi
             if (!visited[nodeSekarang]) {
                 visited[nodeSekarang] = true; // Tandai node ini udah dikunjungi
-                System.out.println("\n[DFS] Scanning a " + nodeSekarang);
+                System.out.println("\n[DFS] Scanning [a" + nodeSekarang + "]");
 
                 // Kondisi Berhenti: Kalau node saat ini adalah target yang dicari
                 if (nodeSekarang == target) {
