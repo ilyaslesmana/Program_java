@@ -1,6 +1,6 @@
 package Struktur_data.Tugas.Tugas_3;
 
-// Import library struktur data yang dibutuhin dari Java Collections
+// Import library yang dibutuhkan pada praktik
 import java.util.Stack;
 import java.util.LinkedList;
 import java.util.ArrayList;
@@ -9,15 +9,15 @@ import java.util.Queue;
 
 public class latihanGraph {
 
-    // Inner class untuk mendefinisikan struktur Graph itu sendiri
+    // Buat blueprintnya
     static class Graph {
         int jumlahNode; // Menyimpan total titik (node/vertex) di dalam graf
         List<List<Integer>> adjencyList; // Menggunakan Adjacency List untuk menyimpan koneksi antar node. Ini sangat
                                          // efisien secara memori dibanding Adjacency Matrix.
-
         // Constructor untuk inisialisasi awal saat objek Graph dibuat
+
         public Graph(int node) {
-            this.jumlahNode = node;
+            this.jumlahNode = node; // komputer langsung melihat isi jumlah node
             adjencyList = new ArrayList<>(node); // Bikin list utama sebesar jumlah node
 
             // Looping untuk bikin list kosong di setiap node, siap diisi koneksi (edge)
@@ -35,7 +35,7 @@ public class latihanGraph {
     public static void main(String[] args) {
 
         int totalNode = 10; // Setup total node yang mau dibikin (Node 0 sampai 9)
-        Graph graf = new Graph(totalNode); // Instansiasi objek graf
+        Graph graf = new Graph(totalNode); // membbuat objek baru dari class Graph langsung di masukan ke Graph
 
         // Mapping jalur / relasi antar node (Membangun topologi graf)
         graf.buatEdge(0, 1);
@@ -101,7 +101,7 @@ public class latihanGraph {
                 // Looping mundur (dari kanan ke kiri) untuk masukin ke stack.
                 // Karena sifat LIFO, yang dimasukin terakhir (anak kiri) akan diproses duluan.
                 for (int i = child.size() - 1; i >= 0; i--) {
-                    int nodechild = child.get(i);
+                    int nodechild = child.get(i);// mengambil child indeks i memaasukan ke nodechild
                     if (!visited[nodechild]) { // Hanya masukin ke stack kalau anak ini belum pernah dikunjungi
                         stackLifo.push(nodechild);
                         System.out.println("------> push node child " + nodechild + " kedalam stack");
@@ -136,7 +136,6 @@ public class latihanGraph {
                 System.out.println(">>> DATA DITEMUKAN! Node a" + target + " menggunakan metode BFS");
                 return;
             }
-
             // Lo pakai For-Each loop di sini. Smart move! Kode jadi lebih *clean*.
             // Cek semua anak/tetangga dari node saat ini
             for (int nodeChild : graf.adjencyList.get(nodeSekarang)) {
